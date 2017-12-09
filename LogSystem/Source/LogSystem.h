@@ -67,16 +67,16 @@ private:
     }
 
     template<typename... Args>
-    static __forceinline void log(float&& head, Args&&... args)
+    static __forceinline void log(const float head, Args&&... args)
     {
-        _logFile << std::hex << std::forward<float>(head) << "f";
+        _logFile << std::hex << std::forward<const float>(head) << "f";
         log(std::forward<Args>(args)...);
     }
     
     template<typename... Args>
-    static __forceinline void log(double&& head, Args&&... args)
+    static __forceinline void log(const double head, Args&&... args)
     {
-        _logFile << std::hex << std::forward<double>(head) << "d";
+        _logFile << std::hex << std::forward<const double>(head) << "d";
         log(std::forward<Args>(args)...);
     }
 

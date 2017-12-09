@@ -14,7 +14,8 @@ int main()
     FLog(str.c_str(), "is ", 1, " File Log");
     float fvalue = 1.0F;
     FLogWarn("This is ", fvalue, " File Log");
-    FLogError("This is a File Log, Error local ", __CODELOCAL__);
+    double dvalue = 1.0F;
+    FLogError("This is ", dvalue, " File Log, Error local ", __CODELOCAL__);
 
     //
     std::cin.get();
