@@ -12,7 +12,7 @@ int main()
     SetLogFilePath("../Log/");
 
     FLog(str.c_str(), "is ", 1, " File Log");
-    FLOAT fvalue = 1.1F;
+    float fvalue = 1.0F;
     FLogWarn("This is ", fvalue, " File Log");
     FLogError("This is a File Log, Error local ", __CODELOCAL__);
 
