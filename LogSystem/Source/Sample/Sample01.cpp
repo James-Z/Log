@@ -4,9 +4,9 @@
 int main()
 {
     std::string str("This ");
-    Log(str.c_str(), "is a File Log");
-    LogWarn("This is a File Log");
-    LogError("This is a File Log, Error local ", __CODELOCAL__);
+    Log(str.c_str(), "is a Log");
+    LogWarn("This is a Log");
+    LogError("This is a Log, Error local ", __CODELOCAL__);
 
     //
     SetLogFilePath("../Log/");
