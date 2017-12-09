@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+LogSystem/LogSystem/x64/
+*.db
+*.suo
+*.opendb
+*.ilk
+LogSystem/x64/
