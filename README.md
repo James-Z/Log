@@ -1,2 +1,2 @@
 # Log
-This is a simple LOG system
+This is a simple Log system
