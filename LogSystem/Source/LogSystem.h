@@ -34,7 +34,7 @@ public:
     template<typename Head, typename... Args>
     static __forceinline void LogWarn(Head&& head, Args&&... args)
     {
-        LogFile() << "Waring\t: ";
+        LogFile() << "Warning\t: ";
         log(std::forward<Head>(head), std::forward<Args>(args)...);
     }
     template<typename Head, typename... Args>
@@ -60,23 +60,23 @@ private:
     }
 
     template<typename... Args>
-    static __forceinline void log(int&& head, Args&&... args)
+    static __forceinline void log(const int head, Args&&... args)
     {
-        _logFile << std::hex << std::forward<int>(head);
+        _logFile << std::dec << head;
         log(std::forward<Args>(args)...);
     }
 
     template<typename... Args>
     static __forceinline void log(const float head, Args&&... args)
     {
-        _logFile << std::hex << std::forward<const float>(head) << "f";
+        _logFile << std::dec << std::forward<const float>(head) << "f";
         log(std::forward<Args>(args)...);
     }
     
     template<typename... Args>
     static __forceinline void log(const double head, Args&&... args)
     {
-        _logFile << std::hex << std::forward<const double>(head) << "d";
+        _logFile << std::dec << std::forward<const double>(head) << "d";
         log(std::forward<Args>(args)...);
     }
 
@@ -84,7 +84,7 @@ private:
     template<typename... Args>
     static __forceinline void log(glm::vec2&& head, Args&&... args)
     {
-        _logFile << std::hex
+        _logFile << std::dec
             << std::forward<glm::vec2>(head).x << "f, "
             << std::forward<glm::vec2>(head).y << "f";
         log(std::forward<Args>(args)...);
@@ -93,7 +93,7 @@ private:
     template<typename... Args>
     static __forceinline void log(glm::vec3&& head, Args&&... args)
     {
-        _logFile << std::hex
+        _logFile << std::dec
             << std::forward<glm::vec3>(head).x << "f, "
             << std::forward<glm::vec3>(head).y << "f, "
             << std::forward<glm::vec3>(head).z << "f";
